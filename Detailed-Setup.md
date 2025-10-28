@@ -11,8 +11,7 @@ This guide explains how to deploy and test the Event Announcement System step-by
 | **Amazon API Gateway** | Exposes a public REST API endpoint |
 | **AWS Lambda** | Executes the backend logic (publishes messages to SNS) |
 | **Amazon SNS** | Sends notifications to subscribers |
-| **IAM** | Provides permissions for Lambda to access SNS |
-| **CloudWatch** | Monitors and logs Lambda executions |
+
 
 ---
 
@@ -45,3 +44,45 @@ This guide explains how to deploy and test the Event Announcement System step-by
 - Add **Mapping Template**:
   ```json
   { "body": $input.body }
+
+### 4️⃣ Test the API with Postman
+
+Once your API Gateway and Lambda are deployed, you can test the integration using Postman.
+
+🔹 Step 1: Open Postman
+
+Choose Method: POST
+
+Paste your Invoke URL
+
+https://<api-id>.execute-api.ap-south-1.amazonaws.com/prod/publish-event
+
+🔹 Step 2: Add Header
+Key	Value
+Content-Type	application/json
+🔹 Step 3: Add Body
+
+Select Body → raw → JSON, and paste this:
+
+{
+  "event_name": "AWS DevOps Event",
+  "description": "Join our AWS Workshop this Saturday! 📅 Date: 2025-10-25"
+}
+
+🔹 Step 4: Send the Request
+
+You should receive a success response:
+
+{
+  "message": "Event published successfully!"
+}
+
+🔹 Step 5: Verify the Email Notification
+
+Check your registered email inbox — you’ll receive an announcement message from SNS like this:
+
+📢 AWS DevOps Event
+Join our AWS Workshop this Saturday!
+📅 Date: 2025-10-25
+  
+
