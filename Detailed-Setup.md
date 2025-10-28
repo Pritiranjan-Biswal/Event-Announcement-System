@@ -18,18 +18,18 @@ This guide explains how to deploy and test the Event Announcement System step-by
 ## 🪶 Steps to Build
 
 ### 1️⃣ Create SNS Topic
-➮. Go to **Amazon SNS → Topics → Create Topic**
+➤ Go to **Amazon SNS → Topics → Create Topic**
   ![SNS Topic](images/1.png)
 
-➮. Choose *Standard*, name it `event-announcements`
+➤ Choose *Standard*, name it `event-announcements`
 
   ![SNS Topic](images/3.png)
 
-➮.Create a subscription.
+➤ Create a subscription.
 
  ![SNS Topic](images/4.png)
  
-➮. Choose the **Topic ARN** ,protocol as **Email** and provide the email address you want to notified
+➤ Choose the **Topic ARN** ,protocol as **Email** and provide the email address you want to notified
 
 ![SNS Topic](images/5.png)
 
