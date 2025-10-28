@@ -23,7 +23,7 @@ This guide explains how to deploy and test the Event Announcement System step-by
 - Copy the **Topic ARN**
 - Add an **Email subscription** and confirm from your inbox
 
-![SNS Topic](./screenshots/sns-topic.png)
+![SNS Topic](images/1.png)
 
 ---
 
