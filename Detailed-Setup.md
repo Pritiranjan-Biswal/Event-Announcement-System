@@ -25,7 +25,7 @@ II. Choose *Standard*, name it `event-announcements`
 
   ![SNS Topic](images/3.png)
 
-III.Create an subscription.
+III.Create a subscription.
 
  ![SNS Topic](images/4.png)
  
