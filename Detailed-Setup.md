@@ -95,17 +95,17 @@ Select Body → raw → JSON, and paste this:
 
 You should receive a success response:
 
-`{`
-  `"message": "Event published successfully!"`
-`}`
+`{
+  "message": "Event published successfully!"
+}`
 
 🔹 Step 5: Verify the Email Notification
 
 Check your registered email inbox — you’ll receive an announcement message from SNS like this:
 
-`📢 AWS DevOps Event`
-`Join our AWS Workshop this Saturday!`
-`📅 Date: 2025-10-25`
+📢 AWS DevOps Event
+Join our AWS Workshop this Saturday!
+📅 Date: 2025-10-25
 
 ![API Topic](images/24.png)
 
