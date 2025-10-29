@@ -79,15 +79,18 @@ Paste your Invoke URL
 https://<api-id>.execute-api.ap-south-1.amazonaws.com/prod/publish-event
 
 🔹 Step 2: Add Header
-Key	Value
-Content-Type	application/json
+
+| Key | Value |
+|----------|----------|
+| **application** | **json** |
+
 🔹 Step 3: Add Body
 
 Select Body → raw → JSON, and paste this:
 
 {
-  "event_name": "AWS DevOps Event",
-  "description": "Join our AWS Workshop this Saturday! 📅 Date: 2025-10-25"
+`  "event_name": "AWS DevOps Event",
+  "description": "Join our AWS Workshop this Saturday! 📅 Date: 2025-10-25" `
 }
 
 🔹 Step 4: Send the Request
