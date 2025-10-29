@@ -87,17 +87,17 @@ Paste your Invoke URL(`https://<api-id>.execute-api.ap-south-1.amazonaws.com/pro
 Select Body → raw → JSON, and paste this:
 
 {
-`  "event_name": "AWS DevOps Event", `
-  `"description": "Join our AWS Workshop this Saturday! 📅 Date: 2025-10-25" `
+ "event_name": "AWS DevOps Event", 
+  "description": "Join our AWS Workshop this Saturday! 📅 Date: 2025-10-25" 
 }
 
 🔹 Step 4: Send the Request
 
 You should receive a success response:
 
-`{
+{
   "message": "Event published successfully!"
-}`
+}
 
 🔹 Step 5: Verify the Email Notification
 
