@@ -37,6 +37,7 @@ This guide explains how to deploy and test the Event Announcement System step-by
 
 ### 2️⃣ Create Lambda Function
 ➤ Go to **AWS Lambda → Create Function**
+
 ➤ Runtime: *Python 3.11*
 
 ![LAMBDA Topic](images/8.png)
@@ -45,18 +46,25 @@ This guide explains how to deploy and test the Event Announcement System step-by
 
   ![LAMBDA Topic](images/9.png)
   
-➤Paste your Lambda code
+➤ Paste your Lambda code
 
 
 ---
 
 ### 3️⃣ Create API Gateway
-- Create a **REST API**
-- Resource: `/publish-event`
-- Method: `POST` → Integrate with Lambda
-- Add **Mapping Template**:
-  ```json
-  { "body": $input.body }
+➤ Create a **REST API**
+
+  ![API Topic](images/15.png)
+
+➤ Resource: `/publish-event`
+
+![API Topic](images/18.png)
+
+➤ Method: `POST` → Integrate with Lambda
+
+![API Topic](images/19.png)
+
+
 
 ### 4️⃣ Test the API with Postman
 
