@@ -44,12 +44,13 @@ This guide explains how to deploy and test the Event Announcement System step-by
 ➤ Add SNS publish permissions
 
   ![LAMBDA Topic](images/9.png)
-- Paste your Lambda code
+  
+➤Paste your Lambda code
 
 import json
 import boto3
 
-# Initialize SNS client
+Initialize SNS client
 sns = boto3.client('sns')
 TOPIC_ARN = 'arn:aws:sns:ap-south-1:350235531785:event-announcements'
 
