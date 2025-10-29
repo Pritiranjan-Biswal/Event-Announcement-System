@@ -74,9 +74,7 @@ Once your API Gateway and Lambda are deployed, you can test the integration usin
 
 Choose Method: POST
 
-Paste your Invoke URL
-
-https://<api-id>.execute-api.ap-south-1.amazonaws.com/prod/publish-event
+Paste your Invoke URL(`https://<api-id>.execute-api.ap-south-1.amazonaws.com/prod/publish-event`)
 
 🔹 Step 2: Add Header
 
@@ -89,24 +87,25 @@ https://<api-id>.execute-api.ap-south-1.amazonaws.com/prod/publish-event
 Select Body → raw → JSON, and paste this:
 
 {
-`  "event_name": "AWS DevOps Event",
-  "description": "Join our AWS Workshop this Saturday! 📅 Date: 2025-10-25" `
+`  "event_name": "AWS DevOps Event", `
+  `"description": "Join our AWS Workshop this Saturday! 📅 Date: 2025-10-25" `
 }
 
 🔹 Step 4: Send the Request
 
 You should receive a success response:
 
-{
-  "message": "Event published successfully!"
-}
+`{`
+  `"message": "Event published successfully!"`
+`}`
 
 🔹 Step 5: Verify the Email Notification
 
 Check your registered email inbox — you’ll receive an announcement message from SNS like this:
 
-📢 AWS DevOps Event
-Join our AWS Workshop this Saturday!
-📅 Date: 2025-10-25
-  
+`📢 AWS DevOps Event`
+`Join our AWS Workshop this Saturday!`
+`📅 Date: 2025-10-25`
+
+![API Topic](images/24.png)
 
