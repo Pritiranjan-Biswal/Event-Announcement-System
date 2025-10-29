@@ -36,12 +36,51 @@ This guide explains how to deploy and test the Event Announcement System step-by
 ---
 
 ### 2️⃣ Create Lambda Function
-- Go to **AWS Lambda → Create Function**
-- Runtime: *Python 3.11*
-- Add SNS publish permissions
+➤ Go to **AWS Lambda → Create Function**
+➤ Runtime: *Python 3.11*
+
+![LAMBDA Topic](images/8.png)
+
+➤ Add SNS publish permissions
+
+  ![LAMBDA Topic](images/9.png)
 - Paste your Lambda code
 
-![Lambda Config](./screenshots/lambda-config.png)
+import json
+import boto3
+
+# Initialize SNS client
+sns = boto3.client('sns')
+TOPIC_ARN = 'arn:aws:sns:ap-south-1:350235531785:event-announcements'
+
+def lambda_handler(event, context):
+    try:
+        # Parse the request body from API Gateway
+        body = json.loads(event['body'])
+        event_name = body.get('event_name')
+        description = body.get('description')
+
+        # Create message to send via SNS
+        message = f"📢 New Event: {event_name}\nDetails: {description}"
+
+        # Publish the message to SNS topic
+        sns.publish(
+            TopicArn=TOPIC_ARN,
+            Message=message,
+            Subject=f"Event Announcement: {event_name}"
+        )
+
+        return {
+            'statusCode': 200,
+            'body': json.dumps({'message': 'Event published successfully!'})
+        }
+
+    except Exception as e:
+        return {
+            'statusCode': 500,
+            'body': json.dumps({'error': str(e)})
+        }
+
 
 ---
 
